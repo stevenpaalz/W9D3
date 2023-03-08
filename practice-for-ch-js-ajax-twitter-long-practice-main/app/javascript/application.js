@@ -18,8 +18,8 @@ let followToggleSelector = "follow-toggle";
 
 
 document.querySelectorAll(followToggleSelector).forEach((el) => {
-  console.log(el)
   new FollowToggle(el);
+  console.log(el);
 });
 
 // document.querySelectorAll(infiniteTweetsSelector).forEach((el) => {

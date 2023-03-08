@@ -8,11 +8,18 @@ export default class FollowToggle {
 
   async handleClick(event) {
     event.preventDefault();
+    // if (this.followState === "followed") {
+    //   this.unfollow();
+    // } else {
+    //   this.follow();
+    // }
+    this.followState === "followed" ? this.unfollow() : this.follow();
     console.log(this.followState);
   }
 
   async follow() {
     // Your code here
+    
   }
 
   async unfollow() {

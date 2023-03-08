@@ -11,20 +11,25 @@ export default class FollowToggle {
     if (this.followState === "followed") {
       this.unfollow();
     } else {
+      // debugger
       this.follow();
     }
     // this.followState === "followed" ? this.unfollow() : this.follow();
-    console.log(this.followState());
+    console.log(this.followState);
   }
 
   async follow() {
+    // debugger
+    API.followUser()
     // Your code here
-    this.followState("unfollowed")
+    // this.followState("unfollowed")
   }
 
   async unfollow() {
+    API.unfollowUser()
+
     // Your code here
-    this.followState("followed")
+    // this.followState("followed")
 
   }
 

@@ -1,9 +1,9 @@
 const csrfToken = document.querySelector("meta[name=csrf-token]").content;
 
 
-async function customFetch(url, options = {}) {
+export async function customFetch(url, options = {}) {
   options.headers = {
-    // Your code here
+    "X-CSRF-Token": csrfToken,
     ...options.headers
   };
 
@@ -11,9 +11,10 @@ async function customFetch(url, options = {}) {
 }
 
 export function followUser(id) {
-  return customFetch(`users/${id}/follow`, {method: "POST"})
+  debugger
+  return customFetch(`users/${id}/follow`, {method: "POST" })
 }
 
 export function unfollowUser(id) {
-  return customFetch(`users/${id}/follow`, {method: "DELETE"})
+  return customFetch(`users/${id}/follow`, {method: "DELETE" })
 }
